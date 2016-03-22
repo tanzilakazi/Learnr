@@ -1,0 +1,75 @@
+2. General Description
+The product should allow users to log in and, depending on the type of
+user, organize or join a group learning session on a particular topic. These
+sessions are stored in a database along with their locations, times, and
+topics.
+2.1 Use Model Survey
+There are three main types of users. Participants form the majority, and are
+simply any individuals who wish to participate in a particular meeting. They
+may use the search functionality to search for meetings by location, topic of
+interest, and/or date. These
+participants have their own set of qualifications that determines the
+complexity of the meetings they may register to participate in. For example, a participant
+with no background in computer science should not be allowed to attend a
+learning session on machine learning. This keeps individuals from attempting
+to attend sessions that are poorly suited to their abilities, allowing more
+qualified individuals to get more out of the session since they can focus
+entirely on the topic, rather than prerequisite knowledge they already have.
+Paricipants may also submit requests for sessions to system admins. If a
+participant cannot find a session for his or her particular interest, or a
+session that fits with the participant's availability, he or she may submit a
+request for a new session to a system admin.
+
+Another type of user is a coordinator. These users lead learning sessions,
+and will typically be the most knowledgable about the topic at hand. Each
+session must have a coordinator to manage participants and aid them in
+learning the topic. Coordinators must therefore allow system admins to know
+their availability in advance. Coordinators are also generally more qualified
+than the majority of participant users, though likely in a smaller set of
+topics. Any user may view a coordinator's qualifications and topics of
+interests. Additionally, a coordinator may attend any session that does not
+conflict with another session that he or she is coordinating (i.e. if a
+coordinator is scheduled to coordinate a session, he or she may not register
+to attend another session at the same time). A coordinator, like a
+participant, may request that a session be created for a particular topic. If
+the session's topic is one for which the coordinator is qualified, the
+coordinator will be given the option to coordinate the new meeting
+automatically.
+
+System admins manage requests for new sessions. They read the session request,
+which includes a topic, description, and list of activities conducive to
+learning goals laid out in the description. If the request has been submitted
+by a coordinator who has not chosen to lead it him/herself, the admin looks
+for a qualified coordinator to lead the session and, based on this
+coordinator's availability, selects a date and time for the meeting. Once the
+meeting has been finalized, the admin enters it into the database and allows
+participants to register for it. If a session becomes very popular and has too
+many participants, the admin may assign additional coordinators to it so that
+a single coordinator is not overwhelmed. Admins also manage topic requests.
+Any user may request that a new topic be added for future sessions to be based
+on. For example, if a participant wishes to attend a session on cooking, but
+finds that cooking is not an available topic, he or she may submit a request
+for cooking to be added. This is how qualifications are managed. A user may
+assign him/herself a rating from 1 to 10 on how knowledgable he or she is on a
+particular topic. Thus session qualification requirements become things such
+as "Minimum rating 5 in cooking." I acknowledge that cooking, being as broad
+an area as it is, is a poor example, but my point stands.
+
+2.2 Assumptions and Dependencies
+The product will require use of some type of search engine. Google's Custom
+Search Engine should suffice. Simlarly, the Google Earth API should be enough
+to allow for precise mapping of sessions. It will of course need a database of
+some sort to store all the sessions and users. MySQL should be good enough. In
+the event that we cannot get access to some type of search engine and cannot
+write one ourselves, the search functionality will have to be replaced with a
+listing of sessions and users. Users will need to manually hunt through the
+list of sessions for one that suits them. The precise mapping of sessions is
+more for convenience, and can be replaced with an address or similar on the
+session listing. The database technology, however, is critical. Unless we plan
+to manually type sessions and users into a little Notepad text file or an
+Excel spreadsheet and data
+mine that whenever we need to pull up a session, some type of minimal database
+software is required.
+
+Of course, we could also create all these dependencies from scratch, but I
+think a release date before 2020 is preferred.
