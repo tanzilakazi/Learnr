@@ -1,0 +1,5 @@
+Purpose
+The purpose of this document is to provide an overview with the purpose, scope, references, case model survey, assumptions, dependencies, case reports, and non-functional requirements of the Software Requirements Specification for the Learnr application. The document explains the functional features of Learnr including interface details, design constraints, and performance characteristics. 
+
+Scope
+The Learnr application is a scheduling tool that can be used quickly and easily to find time and place to meet with people who are interested in studying in a group. The Learnr application enables college students an easier way to organize, administer and manage all student, course, and meeting related information and outcomes. The Learnr is an integrated application system of modules and functions that provide the most convenient method for users. Furthermore, all the data is saved using SQL database format which allows to store and retrieve large amounts of records quickly and efficiently. 
